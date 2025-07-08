@@ -33,7 +33,6 @@ return [
     // Available link placeholders: %lang%
     // To disable a header_item in config.php, you can set its value to null
     'header_items'            => [
-        'meetings' => null
         // Name can be a translation string, permission is an engelsystem privilege
         // 'Name' => 'URL',
         // 'some.key' => ['URL', 'permission'],
@@ -162,24 +161,96 @@ return [
     // Supported themes
     // To disable a theme in config.php, you can set its value to null
     'themes' => [
-        20 => null,
-        19 => null,
-        18 => null,
-        17 => null,
-        16 => null,
-        15 => null,
-        14 => null,
-        13 => null,
-        12 => null,
-        10 => null,
-        9 => null,
-        8 => null,
-        7 => null,
-        6 => null,
-        5 => null,
-        4 => null,
-        3 => null,
-        2 => null,
+        20 => [
+            'name' => 'Engelsystem eh22-light (2025)',
+            'type' => 'light',
+            'navbar_classes' => 'navbar-light',
+        ],
+        19 => [
+            'name' => 'Engelsystem eh22-dark (2025)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark',
+        ],
+        18 => [
+            'name' => 'Engelsystem 38c3 (2024) - Lila, Lachs und Kurven',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark',
+        ],
+        17 => [
+            'name' => 'Engelsystem 37c3 (2023)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark',
+        ],
+        16 => [
+            'name' => 'Engelsystem cccamp23 (2023)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark',
+        ],
+        15 => [
+            'name' => 'Engelsystem rC3 (2021)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark',
+        ],
+        14 => [
+            'name' => 'Engelsystem rC3 teal (2020)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark bg-black border-dark',
+        ],
+        13 => [
+            'name' => 'Engelsystem rC3 violet (2020)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark bg-black border-dark',
+        ],
+        12 => [
+            'name' => 'Engelsystem 36c3 (2019)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark bg-black border-dark',
+        ],
+        10 => [
+            'name' => 'Engelsystem cccamp19 green (2019)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark bg-black border-dark',
+        ],
+        9 => [
+            'name' => 'Engelsystem cccamp19 yellow (2019)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark bg-black border-dark',
+        ],
+        8 => [
+            'name' => 'Engelsystem cccamp19 blue (2019)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark bg-black border-dark',
+        ],
+        7 => [
+            'name' => 'Engelsystem 35c3 dark (2018)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-primary navbar-dark bg-black border-primary',
+        ],
+        6 => [
+            'name' => 'Engelsystem 34c3 dark (2017)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark bg-black border-dark',
+        ],
+        5 => [
+            'name' => 'Engelsystem 34c3 light (2017)',
+            'type' => 'light',
+            'navbar_classes' => 'navbar-light bg-light',
+        ],
+        4 => [
+            'name' => 'Engelsystem 33c3 (2016)',
+            'type' => 'dark',
+            'navbar_classes' => 'navbar-dark bg-body border-dark',
+        ],
+        3 => [
+            'name' => 'Engelsystem 32c3 (2015)',
+            'type' => 'light',
+            'navbar_classes' => 'navbar-dark bg-black border-dark',
+        ],
+        2 => [
+            'name' => 'Engelsystem cccamp15',
+            'type' => 'light',
+            'navbar_classes' => 'navbar-light bg-light',
+        ],
         11 => [
             'name' => 'Engelsystem high contrast',
             'type' => 'dark',
