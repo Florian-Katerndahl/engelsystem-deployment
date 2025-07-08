@@ -24,5 +24,5 @@ Caddy only needs an email for the TLS certificate and a domain. Both should be g
 
 ### Engelsystem
 
-Almost all settings can/should be made by setting the corresponding values in `environments/engel.env`. Note though, that not all configuration is possible that way and some settings require changes to the PHP config file. `configs/config.default.php` is the default configuration at the time of writing and is adapted in `configs/config.php` by e.g. including different mail settings (different key) to enable mail notifications.
+Almost all settings can/should be made by setting the corresponding values in `environments/engel.env`. Note though, that not all configuration is possible that way and some settings require changes to the PHP config file. `configs/config.default.php` is the default configuration at the time of writing and is adapted in `configs/config.php` by e.g. including different mail settings (different key) to enable mail notifications or setting the event homepage in the website's footer.
 
