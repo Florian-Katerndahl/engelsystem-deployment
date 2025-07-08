@@ -64,7 +64,7 @@ services:
     image: mariadb:10.7
     restart: always
     environment:
-      MYSQL_DATABASE: ngelsystem
+      MYSQL_DATABASE: engelsystem
       MYSQL_USER: engelsystem
       MYSQL_PASSWORD: engelsystem
       MYSQL_RANDOM_ROOT_PASSWORD: "1"
