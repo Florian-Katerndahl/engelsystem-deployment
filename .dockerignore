@@ -1,0 +1,5 @@
+.git/
+configs/
+docker-compose.yml
+README.md
+setup.sh

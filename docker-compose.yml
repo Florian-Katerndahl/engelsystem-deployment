@@ -1,0 +1,88 @@
+name: angels
+
+services:
+  webserver:
+    image: caddy:latest
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - type: bind
+        source: configs/Caddyfile
+        target: /etc/caddy/Caddyfile
+        read_only: true
+      - type: volume
+        source: caddy_sites
+        target: /srv
+      - type: volume
+        source: caddy_certs
+        target: /certs
+      - type: volume
+        source: caddy_data
+        target: /data
+      - type: volume
+        source: caddyy_config
+        target: /config
+      - type: volume
+        source: engel_volume
+        target: /var/www/engelsystem
+    depends_on:
+      - engelsystem
+    networks:
+      - internet
+    env_file:
+      - environments/caddy.env
+  engelsystem:
+    image: engelsystem
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - database
+    ports:
+      - 9000:9000
+    restart: always
+    volumes:
+      - type: volume
+        source: engel_volume
+        target: /var/www/engelsystem
+      - type: bind
+        source: configs/config.php
+        target: /var/www/engelsystem/config/config.php
+    environment:
+      MYSQL_TYPE: mariadb
+      MYSQL_HOST: database
+      MYSQL_USER: engelsystem
+      MYSQL_PASSWORD: engelsystem
+      MYSQL_DATABASE: engelsystem
+    env_file:
+      - environments/engel.env
+    networks:
+      - internet
+      - database
+  database:
+    image: mariadb:10.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: ngelsystem
+      MYSQL_USER: engelsystem
+      MYSQL_PASSWORD: engelsystem
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+      MYSQL_INITDB_SKIP_TZINFO: "yes"
+    networks:
+      - database
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  db:
+  engel_volume:
+  caddy_sites:
+  caddy_certs:
+  caddy_data:
+  caddyy_config:
+
+networks:
+  internet:
+  database:
+    internal: true

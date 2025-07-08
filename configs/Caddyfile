@@ -1,0 +1,27 @@
+{$DOMAIN}:443 {
+    log {
+        level INFO
+    }
+
+    tls {$TLS_EMAIL}
+
+    header / {
+        # Enable HTTP Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000;"
+        # Enable cross-site filter (XSS) and tell browser to block detected attacks
+        X-XSS-Protection "1; mode=block"
+        # Disallow the site to be rendered within a frame (clickjacking protection)
+        X-Frame-Options "DENY"
+        # Send the true remote IP to Rocket
+        header_up X-Real-IP {remote_host}
+    }
+
+    handle_errors {
+	    respond "{err.status_code} {err.status_text}"
+    }
+
+    root * /var/www/engelsystem/public/
+    encode
+    php_fastcgi engelsystem:9000
+    file_server
+}
