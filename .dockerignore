@@ -1,4 +1,5 @@
 .git/
+environments/
 configs/
 docker-compose.yml
 README.md
