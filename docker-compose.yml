@@ -32,6 +32,8 @@ services:
       - internet
     env_file:
       - environments/caddy.env
+    logging:
+      driver: none
   engelsystem:
     image: engelsystem
     build:
