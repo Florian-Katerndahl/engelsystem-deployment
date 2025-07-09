@@ -49,7 +49,9 @@ return [
 
         // URL to faq page
         'faq.faq' => null,
-        'JKG Homepage' => 'https://jkg2025.de',
+	'JKG Homepage' => 'https://jkg2025.de',
+	'Impressum' => 'https://geodach.org/impressum/',
+	'Datenschutzerklärung' => 'https://helfen.jkg2025.de/datenschutz',
         'footer.issues' => null,
         'footer.github' => null,
         'credits' => null,
@@ -407,7 +409,7 @@ return [
     // To disable a locale in config.php, you can set its value to null
     'locales'                 => [
         'de_DE' => 'Deutsch',
-        'en_US' => 'Englisch',
+        'en_US' => null,
     ],
 
     // The default locale to use
