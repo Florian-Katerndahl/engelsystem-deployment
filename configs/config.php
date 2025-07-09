@@ -51,7 +51,7 @@ return [
         'faq.faq' => null,
 	'JKG Homepage' => 'https://jkg2025.de',
 	'Impressum' => 'https://geodach.org/impressum/',
-	'Datenschutzerklärung' => 'https://helfen.jkg2025.de/datenschutz',
+	'Datenschutzerklärung' => 'https://helfen.jkg2025.de/datenschutz.html',
         'footer.issues' => null,
         'footer.github' => null,
         'credits' => null,

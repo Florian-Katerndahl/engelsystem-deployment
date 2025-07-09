@@ -4,12 +4,16 @@ services:
   webserver:
     image: caddy:latest
     ports:
-      - 80:80
+      #- 80:80
       - 443:443
     volumes:
       - type: bind
         source: configs/Caddyfile
         target: /etc/caddy/Caddyfile
+        read_only: true
+      - type: bind
+        source: contents/datenschutz.html
+        target: /var/www/engelsystem/public/datenschutz.html
         read_only: true
       - type: volume
         source: caddy_sites
