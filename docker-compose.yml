@@ -4,7 +4,7 @@ services:
   webserver:
     image: caddy:latest
     ports:
-      #- 80:80
+      - 80:80
       - 443:443
     volumes:
       - type: bind
