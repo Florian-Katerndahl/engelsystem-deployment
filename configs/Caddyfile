@@ -1,6 +1,6 @@
 {$DOMAIN}:443 {
     log {
-        level INFO
+	output discard
     }
 
     tls {$TLS_EMAIL}
