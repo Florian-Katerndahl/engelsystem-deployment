@@ -1,6 +1,6 @@
 # Taken from https://github.com/engelsystem/engelsystem/blob/main/docker/Dockerfile
 
-FROM alpine as source
+FROM alpine AS source
 RUN apk add git && \
     git clone https://github.com/engelsystem/engelsystem.git
 
@@ -65,3 +65,4 @@ ENV TRUSTED_PROXIES 10.0.0.0/8,::ffff:10.0.0.0/8,\
                     ::1/128,fc00::/7,fec0::/10
 
 ENTRYPOINT [ "php-fpm" ]
+
