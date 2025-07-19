@@ -12,7 +12,7 @@
         X-XSS-Protection "1; mode=block"
         # Disallow the site to be rendered within a frame (clickjacking protection)
         X-Frame-Options "DENY"
-        # Send the true remote IP to Rocket
+        # Send the true remote IP to engelsystem
         header_up X-Real-IP {remote_host}
     }
 
