@@ -46,7 +46,7 @@ services:
     depends_on:
       - database
     ports:
-      - "127.0.0.1:9000:9000"
+      - 9000:9000
     restart: always
     volumes:
       - type: volume
@@ -64,7 +64,6 @@ services:
     env_file:
       - environments/engel.env
     networks:
-      - internet
       - database
   database:
     image: mariadb:10.7
