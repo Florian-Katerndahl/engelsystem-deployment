@@ -39,6 +39,7 @@ services:
       - environments/caddy.env
     logging:
       driver: none
+    restart: always
   engelsystem:
     image: engelsystem
     build:
